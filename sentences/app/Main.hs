@@ -1,4 +1,8 @@
 module Main where
 
+import System.Process (system)
+
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = do
+    _ <- system "clear"
+    putStrLn "Hello, Haskell!"
