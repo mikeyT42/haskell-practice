@@ -14,5 +14,5 @@ countToTen =
 count :: [Integer] -> Integer -> [Integer]
 count acc n =
   if last acc < 10
-    then count (acc ++ [n+1]) (n + 1)
+    then count (acc ++ [n + 1]) (n + 1)
     else acc
