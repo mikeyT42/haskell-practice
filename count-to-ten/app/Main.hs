@@ -9,10 +9,10 @@ main = do
 countToTen :: IO ()
 countToTen =
   let n = 0
-   in print (count 0 n)
+   in print (count [0] n)
 
-count :: Integer -> Integer -> Integer
+count :: [Integer] -> Integer -> [Integer]
 count acc n =
-  if acc < 10
-    then count (acc + n) (n + 1)
+  if last acc < 10
+    then count (acc ++ [n+1]) (n + 1)
     else acc
