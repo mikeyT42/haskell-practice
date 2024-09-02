@@ -22,5 +22,18 @@ main = do
       putStrLn "---------------------------------------------------------------"
 
 -- /////////////////////////////////////////////////////////////////////////////
-inputRecursion :: IO () -> RecursionControl
-inputRecursion = 
+inputRecursion :: IO ()
+inputRecursion = do
+    putStrLn "\n\nPlease input a sentence. If you want to exit, just hit the\n"
+    putStrLn "key.\n"
+    input <- getLine
+    case validate input of
+    True -> ""
+    False -> ""
+    putStrLn input
+
+-- /////////////////////////////////////////////////////////////////////////////
+validate :: String -> Bool
+validate "" = False
+validate "\n" = True
+validate input = True
